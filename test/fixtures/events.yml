@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  description: MyString
+  city: one
+  address: MyString
+  start: 2016-07-15 22:19:46
+  end: 2016-07-15 22:19:46
+  wifi: false
+  power: false
+
+two:
+  title: MyString
+  description: MyString
+  city: two
+  address: MyString
+  start: 2016-07-15 22:19:46
+  end: 2016-07-15 22:19:46
+  wifi: false
+  power: false

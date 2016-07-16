@@ -1,9 +1,8 @@
-# README
+# Lure Party
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This app is to help people find and plan pokemon go lure events
 
-Things you may want to cover:
+TODO:
 
 * Ruby version
 
@@ -22,4 +21,3 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
-# Lure Party

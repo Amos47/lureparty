@@ -13,32 +13,36 @@
 ActiveRecord::Schema.define(version: 20160716021946) do
 
   create_table "cities", force: :cascade do |t|
-    t.string   "name"
+    t.string   "name",       null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["name"], name: "index_cities_on_name", unique: true
   end
 
   create_table "events", force: :cascade do |t|
-    t.string   "title"
+    t.string   "title",                       null: false
     t.string   "description"
-    t.integer  "city_id"
-    t.string   "address"
-    t.datetime "start"
-    t.datetime "end"
-    t.boolean  "wifi"
-    t.boolean  "power"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.integer  "city_id",                     null: false
+    t.string   "address",                     null: false
+    t.datetime "start",                       null: false
+    t.datetime "end",                         null: false
+    t.boolean  "wifi",        default: false
+    t.boolean  "power",       default: false
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
     t.index ["city_id"], name: "index_events_on_city_id"
+    t.index ["start"], name: "index_events_on_start"
   end
 
   create_table "trainers", force: :cascade do |t|
-    t.string   "user_name"
-    t.string   "phone"
+    t.string   "name",       null: false
+    t.string   "phone",      null: false
     t.string   "team"
-    t.integer  "city_id"
+    t.integer  "city_id",    null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["city_id"], name: "index_trainers_on_city_id"
+    t.index ["name"], name: "index_trainers_on_name", unique: true
   end
 
 end

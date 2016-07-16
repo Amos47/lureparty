@@ -7,10 +7,8 @@
     <tr>
       <th>Name</th>
       <th>Phone</th>
-      <th>Email</th>
       <th>Team</th>
-      <th>Location</th>
-      <th>Radius</th>
+      <th>City</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -20,10 +18,8 @@
       <tr>
         <td><%= trainer.name %></td>
         <td><%= trainer.phone %></td>
-        <td><%= trainer.email %></td>
         <td><%= trainer.team %></td>
-        <td><%= trainer.location %></td>
-        <td><%= trainer.radius %></td>
+        <td><%= trainer.city.name %></td>
         <td><%= link_to 'Show', trainer %></td>
         <td><%= link_to 'Edit', edit_trainer_path(trainer) %></td>
         <td><%= link_to 'Destroy', trainer, method: :delete, data: { confirm: 'Are you sure?' } %></td>

@@ -23,12 +23,13 @@
 
   <div class="field">
     <%= f.label :team %>
-    <%= f.text_field :team %>
+    <%= f.text_field :team%>
   </div>
 
   <div class="field">
     <%= f.label :city %>
     <%= f.text_field :city %>
+    <input type="hidden" name="trainer[city_place_id]" id="trainer_city_place_id" data-bind="placeId">
   </div>
 
   <div class="actions">

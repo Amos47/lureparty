@@ -29,6 +29,8 @@ gem 'jbuilder', '~> 2.5'
 # gem 'bcrypt', '~> 3.1.7'
 # Use devise for authentication
 # gem 'devise', '~> 4.2'
+# Use twine for two way data binding
+gem 'twine-rails', '~> 1.0.1'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

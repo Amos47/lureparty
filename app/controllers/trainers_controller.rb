@@ -70,6 +70,8 @@ class TrainersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def trainer_params
-      params.require(:trainer).permit(:name, :phone, :team, :city_id)
+      city = Cites.find_by(:place_id, params[:trainer][:city_place_id])
+      params.delete(:city)
+      params.require(:trainer).permit(:name, :phone, :team, :city_place_id)
     end
 end

@@ -16,33 +16,38 @@ ActiveRecord::Schema.define(version: 20160717234615) do
     t.string   "name",       null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string   "place_id"
+    t.string   "place_id",   null: false
     t.index ["name"], name: "index_cities_on_name", unique: true
+    t.index ["place_id"], name: "index_cities_on_place_id"
   end
 
   create_table "events", force: :cascade do |t|
-    t.string   "title",                       null: false
+    t.string   "title",                         null: false
     t.string   "description"
-    t.integer  "city_id",                     null: false
-    t.string   "address",                     null: false
-    t.datetime "start",                       null: false
-    t.datetime "end",                         null: false
-    t.boolean  "wifi",        default: false
-    t.boolean  "power",       default: false
-    t.datetime "created_at",                  null: false
-    t.datetime "updated_at",                  null: false
+    t.integer  "city_id",                       null: false
+    t.string   "address",                       null: false
+    t.datetime "start",                         null: false
+    t.datetime "end",                           null: false
+    t.boolean  "wifi",          default: false
+    t.boolean  "power",         default: false
+    t.datetime "created_at",                    null: false
+    t.datetime "updated_at",                    null: false
+    t.string   "city_place_id",                 null: false
     t.index ["city_id"], name: "index_events_on_city_id"
+    t.index ["city_place_id"], name: "index_events_on_city_place_id"
     t.index ["start"], name: "index_events_on_start"
   end
 
   create_table "trainers", force: :cascade do |t|
-    t.string   "name",       null: false
-    t.string   "phone",      null: false
+    t.string   "name",          null: false
+    t.string   "phone",         null: false
     t.string   "team"
-    t.integer  "city_id",    null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.integer  "city_id",       null: false
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+    t.string   "city_place_id", null: false
     t.index ["city_id"], name: "index_trainers_on_city_id"
+    t.index ["city_place_id"], name: "index_trainers_on_city_place_id"
     t.index ["name"], name: "index_trainers_on_name", unique: true
   end
 

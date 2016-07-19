@@ -5,7 +5,7 @@
 
 @setupAutoComplete = () ->
   $(document).ready( =>
-    cityInput = document.getElementById('trainer_city') || document.getElementById('event_city')
+    cityInput = document.getElementsByClassName('autocompleteCity')[0]
     return if !cityInput
     @autocompleteCity = new google.maps.places.Autocomplete(cityInput, {types: ['(cities)']})
     @autocompleteCity.addListener('place_changed', @updatePlaceId)

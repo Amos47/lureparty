@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160717234615) do
+ActiveRecord::Schema.define(version: 20160719022305) do
 
   create_table "cities", force: :cascade do |t|
     t.string   "name",       null: false
@@ -44,7 +44,7 @@ ActiveRecord::Schema.define(version: 20160717234615) do
     t.datetime "updated_at",    null: false
     t.string   "city_place_id", null: false
     t.index ["city_place_id"], name: "index_trainers_on_city_place_id"
-    t.index ["name"], name: "index_trainers_on_name", unique: true
+    t.index ["name"], name: "index_trainers_on_name"
   end
 
 end

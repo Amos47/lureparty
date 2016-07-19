@@ -11,25 +11,37 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="form-group">
+    <%= f.label :city_name, "City" %>
+    <%= f.text_field :city_name, class: 'autocompleteCity' %>
+    <%= f.hidden_field :city_place_id %>
+    <input type="hidden" name="trainer[city_place_id]" id="trainer_city_place_id" data-bind="placeId">
+  </div>
+
+  <div class="form-group">
     <%= f.label :name %>
     <%= f.text_field :name %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :phone %>
-    <%= f.text_field :phone %>
+    <%= f.telephone_field :phone %>
   </div>
 
-  <div class="field">
+  <div class="form-group team-logo-select">
     <%= f.label :team %>
-    <%= f.text_field :team%>
-  </div>
-
-  <div class="field">
-    <%= f.label :city %>
-    <%= f.text_field :city %>
-    <input type="hidden" name="trainer[city_place_id]" id="trainer_city_place_id" data-bind="placeId">
+    <label>
+      <%= f.radio_button :team, "Valor" %>
+      <img src="/images/team-valor-med-logo.png">
+    </label>
+    <label>
+      <%= f.radio_button :team, "Mystic" %>
+      <img src="/images/team-mystic-med-logo.png">
+    </label>
+    <label>
+      <%= f.radio_button :team, "Instinct" %>
+      <img src="/images/team-instinct-med-logo.png">
+    </label>
   </div>
 
   <div class="actions">

@@ -24,7 +24,6 @@ class TrainersController < ApplicationController
   # POST /trainers
   # POST /trainers.json
   def create
-    debugger
     @trainer = Trainer.new(trainer_params)
 
     respond_to do |format|
